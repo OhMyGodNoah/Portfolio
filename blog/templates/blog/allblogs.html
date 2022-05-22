@@ -66,7 +66,7 @@
       }
     </style>
 
-    
+
   </head>
   <body>
 
@@ -114,37 +114,24 @@
 </header>
 
 <main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Hi, I'm Noah</h1>
-        <p class="lead text-muted">I like to tap keys on a computer sometime.</p>
-        <p>
-          <a href="mailto:noahgreer.66@gmail.com" class="btn btn-primary my-2">Email Me</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
     <div class="container">
+        <h1 class="text-center pt-3">Welcome to Noah's Blog</h1>
+        <br>
+        <br>
+        <h2>Latest Posts</h2>
+        <hr />
+        {% for blog in blogs.all %}
+        <h3>{{ blog.title }}</h3>
+        <img src="{{ blog.image.link }}">
+        <h3>{{ blog.summary }}</h3>
+        <h3>{{ blog.date }}</h3>
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for job in jobs.all %}
-        <div class="col">
-          <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ job.image.url }}" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
-            </div>
-          </div>
-        </div>
+
         {% endfor %}
-      </div>
+
     </div>
-  </div>
+
 </main>
 
 <footer class="text-muted py-5">
