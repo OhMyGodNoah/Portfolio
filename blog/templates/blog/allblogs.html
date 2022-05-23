@@ -121,13 +121,14 @@
         <h2>Latest Posts</h2>
         <hr />
         {% for blog in blogs.all %}
-        <h3>{{ blog.title }}</h3>
-        <img src="{{ blog.image.link }}">
-        <h3>{{ blog.summary }}</h3>
-        <h3>{{ blog.date }}</h3>
-
-
-
+            <a href=""><h3>{{ blog.title }}</h3></a>
+            {{ blog.date }}
+            <br>
+            <img class="image-fluid" src="{{ blog.image.url }}" height="250" width="250"/>
+            <br/>
+            <br/>
+            <p>{{ blog.summary }}</p>
+            <br>
         {% endfor %}
 
     </div>
