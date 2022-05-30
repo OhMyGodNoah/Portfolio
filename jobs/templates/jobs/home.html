@@ -75,7 +75,7 @@
 
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">NOAH</a>
+    <a class="navbar-brand" href="{% url 'home' %}">NOAH</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -85,7 +85,7 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Blog</a>
+          <a class="nav-link" href="{%  url 'allblogs' %}">Blog</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% static 'Resume.pdf' %}">Resume</a>
@@ -101,7 +101,7 @@
               <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCMruOJLzVy5ok74eCnk8A_Q">YouTube</a></li>
               <li><a class="dropdown-item" href="https://discord.gg/Nu8y9uJuAD">Discord Server</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>s
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -127,6 +127,7 @@
         <p>
           <a href="mailto:noahgreer.66@gmail.com" class="btn btn-primary my-2">Email Me</a>
         </p>
+          <img src="{% static 'Noah_1.jpg' %}" width="250" height="250"><img/>
       </div>
     </div>
   </section>
